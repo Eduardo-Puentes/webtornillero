@@ -27,7 +27,16 @@
 
 .plus-section-icons {
     height: 50px;
-    color: #10499c;
     filter: invert(19%) sepia(99%) saturate(1809%) hue-rotate(205deg) brightness(89%) contrast(92%);
 }
 
+.btn-primary {
+    background-color: #10499c;
+    color: #ffda18;;
+    border: #10499c;
+}
+
+.plus-section-text {
+    color: #10499c;
+    font-weight: 700;
+}

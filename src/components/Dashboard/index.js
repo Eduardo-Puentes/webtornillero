@@ -23,9 +23,9 @@ const Dashboard = () => {
 
                 <div class="container">
                 <div class="carousel-caption text-end">
-                    <h1>One more for good measure.</h1>
-                    <p>Some representative placeholder content for the third slide of this carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                    <h1>Encuentra todo lo que necesites</h1>
+                    <p>Nuestro catálogo tiene todo lo que buscas, aquí podras encontrar lo que necesites.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Catálogo</a></p>
                 </div>
                 </div>
             </div>
@@ -35,9 +35,9 @@ const Dashboard = () => {
 
                 <div class="container">
                 <div class="carousel-caption">
-                    <h1>Another example headline.</h1>
-                    <p>Some representative placeholder content for the second slide of the carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                    <h1>¿Tienes dudas?</h1>
+                    <p>No dudes en contactarnos, envíanos un mensaje por la web o llámanos.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Contacto</a></p>
                 </div>
                 </div>
             </div>
@@ -48,9 +48,9 @@ const Dashboard = () => {
 
                 <div class="container">
                 <div class="carousel-caption text-start">
-                    <h1>Example headline.</h1>
-                    <p>Some representative placeholder content for the first slide of the carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                    <h1>¿Buscas comprar en gran cantidad?</h1>
+                    <p>Da click para obtener una cotización instantanea.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Cotizar</a></p>
                 </div>
                 </div>
             </div>
@@ -67,16 +67,16 @@ const Dashboard = () => {
         </div>
         <div className='plus-section container my-4'>
             <div>
-                <img src={FreeShipping} className="plus-section-icons m-3 crop-icon"></img>Envío Gratis
+                <img src={FreeShipping} className="plus-section-icons m-3 crop-icon"></img><span className='plus-section-text'>Envío Gratis</span>
             </div>
             <div>
-                <img src={Safe} className="plus-section-icons m-3"></img>100% Seguro
+                <img src={Safe} className="plus-section-icons m-3"></img><span className='plus-section-text'>100% Seguro</span>
             </div>
             <div>
-                <img src={Discount} className="plus-section-icons m-3"></img>Descuento Mayorista
+                <img src={Discount} className="plus-section-icons m-3"></img><span className='plus-section-text'>Descuento Mayorista</span>
             </div>
             <div>
-                <img src={Support} className="plus-section-icons m-3"></img>Soporte 24 / 7
+                <img src={Support} className="plus-section-icons m-3"></img><span className='plus-section-text'>Soporte 24/7</span>
             </div>
         </div>
         <div class="container">
