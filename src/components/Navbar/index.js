@@ -47,6 +47,21 @@ const Navbar = () => {
         <>
         <nav>
         <div className="top-container">
+        <div class="navbar">
+                    <div class="navbar-container container">
+                        <input type="checkbox" name="" id=""/>
+                        <div class="hamburger-lines">
+                            <span class="line line1"></span>
+                            <span class="line line2"></span>
+                            <span class="line line3"></span>
+                        </div>
+                        <ul class="menu-items">
+                            <li><a href="#" class="nav-link px-2">Mayoristas</a></li>
+                            <li><a href="#" class="nav-link px-2">Catálogo</a></li>
+                            <li><a href="#" class="nav-link px-2">Nosotros</a></li>
+                        </ul>
+                    </div>
+                </div>
             <div className='left-side-container'>
                 <p className='contact'><i class="bi bi-telephone"></i> Llámanos: (222) 222-2222</p>
                 <p className='free-shipping'><i class="bi bi-box-seam"></i> Envío gratis después de $500</p>
@@ -65,7 +80,6 @@ const Navbar = () => {
                     <li><a href="#" class="nav-link px-2">Catálogo</a></li>
                     <li><a href="#" class="nav-link px-2">Nosotros</a></li>
                 </ul>
-                <img className='hamburger' src={Hamburger}></img>
             </div>
             
             <div class="column">
