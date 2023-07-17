@@ -65,20 +65,23 @@ const Dashboard = () => {
             <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <div className='plus-section container my-4'>
-            <div>
+        <div class="container">
+    </div>
+        <div class="row row-cols-1 row-cols-lg-1 row-cols-md-1 row-cols-sm-1 plus-section">
+            <div class="col sols">
                 <img src={FreeShipping} className="plus-section-icons m-3 crop-icon"></img><span className='plus-section-text'>Envío Gratis</span>
             </div>
-            <div>
+            <div class="col sols">
                 <img src={Safe} className="plus-section-icons m-3"></img><span className='plus-section-text'>100% Seguro</span>
             </div>
-            <div>
+            <div class="col sols">
                 <img src={Discount} className="plus-section-icons m-3"></img><span className='plus-section-text'>Descuento Mayorista</span>
             </div>
-            <div>
+            <div class="col sols">
                 <img src={Support} className="plus-section-icons m-3"></img><span className='plus-section-text'>Soporte 24/7</span>
             </div>
         </div>
+        
         <div class="container">
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">

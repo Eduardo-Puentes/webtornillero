@@ -25,7 +25,6 @@
 }
 
 .btn-cart {
-    background-color: rgba(0,0,0,0.0);
     color: #ffda18;
 }
 
@@ -62,12 +61,13 @@
     display: flex;
     justify-content: center;
     color: #fff;
+    font-size: .9rem;
 }
 
 .left-side-container {
     position: absolute;
     left: 3%;
-    width: 34%;
+    width: 36%;
     display: flex;
     justify-content: space-between;
 }
@@ -124,7 +124,132 @@
     font-size: 30px;
 }
 
+.right-text {
+    margin: 0;
+}
+
 .btn {
     display: inline-flex;
   align-items: center; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@media (max-width: 1100px) {
+    .left-side-container {
+        left: 0%;
+    }
+    .right-side-container {
+        right: 0%;
+    }
+    .free-shipping {
+        display: none;
+    }
+    .contact {
+        width: 100%;
+        text-align: center;
+    }
+    .sucursales {
+        display: none;
+    }
+    .currency {
+        display: none;
+    }
+    .contact2 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .contact2 {
+        display: none;
+    }
+    .contact {
+        display: none;
+    }
+    .logo {
+        position: absolute;
+  left: 50%;
+  margin-left: -75px;
+  margin-top: -65px;
+    }
+}
+
+.hamburger {
+    display: none;
+    width: 30px;
+    filter: invert(91%) sepia(57%) saturate(1040%) hue-rotate(333deg) brightness(96%) contrast(110%);
+}
+
+@media (max-width: 920px) {
+    .links-list {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .complements {
+       margin-left: 20px;
+    }
+    .search-base {
+        display: none;
+    }
+    .header {
+        height: 146px;
+    }
+    .logo {
+        margin-bottom: 40px;
+    }
+    .user-section {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #fef7e5;
+    width: 0px;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  .nav-elements.active {
+    width: 270px;
+  }
+
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements ul li {
+    margin-right: unset;
+    margin-top: 22px;
+  }
 }
