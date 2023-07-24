@@ -88,9 +88,13 @@
     z-index: 10;
 }
 
-[placeholder]:focus::-webkit-input-placeholder {
+.inp::placeholder {
+  text-align: center;
+}
+
+.inp[placeholder]:focus::-webkit-input-placeholder {
     transition: text-indent 0.2s 0.4s ease; 
-    text-indent: -100%;
+    text-indent: -200%;
     opacity: 1;
 }
 
@@ -217,7 +221,7 @@
   width: 100%;
   color: #000;
   opacity: 0.85;
-  height: 50px;
+  height: 0px;
   z-index: 12;
   left: 0;
 }
@@ -225,7 +229,7 @@
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  height: 64px;
+  height: 0px;
   align-items: center;
 }
 
@@ -268,7 +272,7 @@
     .navbar-container {
       display: block;
       position: absolute;
-      height: 79px;
+      height: 0px;
       top: 26px;
     }
   

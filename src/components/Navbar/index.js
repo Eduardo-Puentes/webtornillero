@@ -4,6 +4,7 @@ import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import Logo from '../imgs/Logo_tornillero-1-removebg.png'
 import Hamburger from '../imgs/hamburger.png'
 import "./styles.css"
+import Footer from '../Footer';
 
 const Navbar = () => {
 
@@ -56,9 +57,10 @@ const Navbar = () => {
                             <span class="line line3"></span>
                         </div>
                         <ul class="menu-items">
-                            <li><a href="#" class="nav-link px-2">Mayoristas</a></li>
-                            <li><a href="#" class="nav-link px-2">Catálogo</a></li>
-                            <li><a href="#" class="nav-link px-2">Nosotros</a></li>
+                            <li><Link to="/pedidos" class="nav-link px-2">Pedidos</Link></li>
+                            <li><Link to="/mayoristas" class="nav-link px-2">Mayoristas</Link></li>
+                            <li><Link to="/catalogo" class="nav-link px-2">Catálogo</Link></li>
+                            <li><Link to="/nosotros" class="nav-link px-2">Nosotros</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -76,20 +78,21 @@ const Navbar = () => {
         <div class="align-items-center header g-0 columns">
             <div class="column complements">
                 <ul class="nav justify-content-center links-list">
-                    <li><a href="#" class="nav-link px-2">Mayoristas</a></li>
-                    <li><a href="#" class="nav-link px-2">Catálogo</a></li>
-                    <li><a href="#" class="nav-link px-2">Nosotros</a></li>
+                    <li><Link to="/pedidos" class="nav-link px-2">Pedidos</Link></li>
+                    <li><Link to="/mayoristas" class="nav-link px-2">Mayoristas</Link></li>
+                    <li><Link to="/catalogo" class="nav-link px-2">Catálogo</Link></li>
+                    <li><Link to="/nosotros" class="nav-link px-2">Nosotros</Link></li>
                 </ul>
             </div>
             
             <div class="column">
-                <a href="/" class="align-items-center text-decoration-none">
+                <Link to="/" class="align-items-center text-decoration-none">
                     <img className="logo" src={Logo} alt="Sr Tornillero Logo"/>
-                </a>
+                </Link>
                 <div className='search-base'>
                     <form class="align-items-center">
                         <div class="input-group rounded search-section">
-                            <input class="inp" placeholder="¿Qué quieres encontrar hoy?"/>
+                            <input class="inp" placeholder="¿Qué necesitas hoy?"/>
                         </div>
                     </form>   
                     <div class="bottom-design">
@@ -102,13 +105,13 @@ const Navbar = () => {
             <div class="column complements">
                 <div className='user-section'>
                     <button type="button" class="btn btn-cart"><i class="bi bi-person right-icons"></i><p className='right-text'>Mi Cuenta</p></button>
-                    <button type="button" class="btn btn-cart"><i class="bi bi-cart right-icons"></i><p className='right-text'>Carrito</p></button>
                 </div>
             </div>
         </div>
         </nav>
         <div className="containerb">
             <Outlet/>
+            <Footer/>
         </div>
         </>
     )

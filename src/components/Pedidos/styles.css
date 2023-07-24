@@ -1,0 +1,20 @@
+.contact-container {
+    width: 60%;
+    margin: 40px auto;
+}
+
+.add-product {
+    margin-top: 32px;
+}
+
+.product-view {
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-around;
+    background-color: aliceblue;
+}
+
+.product-desc {
+    margin: 0;
+}
