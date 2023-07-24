@@ -66,22 +66,33 @@ const Pedidos = () => {
     <button type="button" class="btn btn-primary add-product" onClick={() => addProduct()}>Añadir</button>
   </div>
 
-  {items && items.map((ele, index) => (
-    <div className='product-view'>
-      <div>
+
+  <div className='product-view'>
+    <div className='product-section'>
+      <p className='product-desc'>Producto</p>
+    </div>
+    <div className='product-section'>
+      <p className='product-desc'>Cantidad</p>
+    </div>
+    <div className='product-section2'>
+    </div>
+  </div>
+  {items.map((ele, index) => (
+    <div className='product-view' key={ele.product}>
+      <div className='product-section'>
         <p className='product-desc'>{ele.product}</p>
       </div>
-      <div>
+      <div className='product-section'>
         <p className='product-desc'>{ele.quantity}</p>
       </div>
-      <div>
+      <div className='product-section2'>
         <button type="button" class="btn" onClick={() => deleteProduct(index)}><i class="bi bi-x-lg"></i></button>
       </div>
     </div>
   ))}
 
   <div className='col-12'>
-            <h4>Datos de Envio</h4>
+            <h4>Datos de Envío</h4>
           </div>
   <div class="col-12">
     <label for="inputAddress" class="form-label">Address</label>

@@ -18,3 +18,16 @@
 .product-desc {
     margin: 0;
 }
+
+.product-section {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-section2 {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
