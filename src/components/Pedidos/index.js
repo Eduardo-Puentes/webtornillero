@@ -4,6 +4,7 @@ import PhoneInput from 'react-phone-number-input'
 import "./styles.css"
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 const Pedidos = () => {
 
@@ -17,14 +18,29 @@ const Pedidos = () => {
   const [cityInput, setCityInput] = useState('')
   const [stateInput, setStateInput] = useState('')
   const [zipInput, setZipInput] = useState('')
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
     document.getElementById("phoneNumberInput").classList.add("form-control")
+    let param = searchParams.get("producto")
+    if (param) {
+      setProductInput(param)
+    }
   }, [])
 
 
   const addProduct = () => {
-    setItems([...items, {"product": productInput, "quantity": quantityInput}])
+    if(items.findIndex(item => item.product === productInput) !== -1) {
+      setItems(
+        items.map(item => 
+            item.product === productInput 
+            ? {...item, "quantity": quantityInput}
+            : item 
+    ))
+    }
+    else{
+      setItems([...items, {"product": productInput, "quantity": quantityInput}])
+    }
   }
 
   const deleteProduct = (index) => {
@@ -41,13 +57,13 @@ const Pedidos = () => {
             <h4>Datos de Pedido</h4>
           </div>
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Correo Electrónico</label>
-    <input type="email" class="form-control" id="inputEmail4" value={mailInput} onChange={e=>setMailInput(e.target.value)}/>
+    <label for="mailTextInput" class="form-label">Correo Electrónico</label>
+    <input type="email" class="form-control" id="mailTextInput" placeholder='ejemplo@correo.com' value={mailInput} onChange={e=>setMailInput(e.target.value)}/>
   </div>
   <div class="col-md-6">
-    <label for="phoneNumberInput" class="form-label">Phone</label>
+    <label for="phoneNumberInput" class="form-label">Teléfono</label>
     <PhoneInput
-      placeholder="Enter phone number"
+      placeholder="(222) 222 2222"
       defaultCountry='MX'
       id="phoneNumberInput"
       value={phoneInput}
@@ -56,11 +72,11 @@ const Pedidos = () => {
 
   <div className='col-md-6'>
     <label for="inputEmail4" class="form-label">Producto</label>
-    <input type="text" class="form-control" id="inputEmail4" value={productInput} onChange={e=>setProductInput(e.target.value)}/>
+    <input type="text" class="form-control" id="inputEmail4" value={productInput} onChange={e=>setProductInput(e.target.value)} placeholder="Ingrese Producto"/>
   </div>
   <div className='col-md-4'>
     <label for="inputEmail4" class="form-label">Cantidad</label>
-    <input type="text" class="form-control" id="inputEmail4" value={quantityInput} onChange={e=>setQuantityInput(e.target.value)}/>
+    <input type="text" class="form-control" id="inputEmail4" value={quantityInput} onChange={e=>setQuantityInput(e.target.value)} placeholder="Ingrese Cantidad"/>
   </div>
   <div className='col-md-2'>
     <button type="button" class="btn btn-primary add-product" onClick={() => addProduct()}>Añadir</button>
@@ -95,30 +111,27 @@ const Pedidos = () => {
             <h4>Datos de Envío</h4>
           </div>
   <div class="col-12">
-    <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value={address1Input} onChange={e=>setAddress1Input(e.target.value)}/>
+    <label for="inputAddress" class="form-label">Dirección</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Calle" value={address1Input} onChange={e=>setAddress1Input(e.target.value)}/>
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" value={address2Input} onChange={e=>setAddress2Input(e.target.value)}/>
+    <label for="inputAddress2" class="form-label">Dirección 2 (Opcional)</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Casa, Apartamento o Estudio" value={address2Input} onChange={e=>setAddress2Input(e.target.value)}/>
   </div>
   <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
+    <label for="inputCity" class="form-label">Ciudad</label>
     <input type="text" class="form-control" id="inputCity" value={cityInput} onChange={e=>setCityInput(e.target.value)}/>
   </div>
   <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select" value={stateInput} onChange={e=>setStateInput(e.target.value)}>
-      <option selected>Choose...</option>
-      <option>...</option>
-    </select>
+    <label for="inputState" class="form-label">Estado</label>
+    <input type="text" class="form-control" id="inputState" value={stateInput} onChange={e=>setStateInput(e.target.value)}/>
   </div>
   <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
+    <label for="inputZip" class="form-label">C.P.</label>
     <input type="text" class="form-control" id="inputZip" value={zipInput} onChange={e=>setZipInput(e.target.value)}/>
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary">Enviar Pedido</button>
   </div>
 </form>
         </div>

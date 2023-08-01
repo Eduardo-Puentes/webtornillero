@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Routes>
       {!user && <Route path="/" element={<Navbar/>} >
-        <Route path='/' exact element={<Dashboard/>}/>
+        <Route path='/webtornillero' exact element={<Dashboard/>}/>
         <Route path='/mayoristas' exact element={<Mayoristas/>}/>
         <Route path='/catalogo' exact element={<Catalogo/>}/>
         <Route path='/pedidos' exact element={<Pedidos/>}/>

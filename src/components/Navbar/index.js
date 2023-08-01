@@ -11,6 +11,7 @@ const Navbar = () => {
     const [isActiveOrder, setIsActiveOrder] = useState(false);
     const [isActiveDashboard, setIsActiveDashboard] = useState(false);
     const [isActiveInventory, setIsActiveInventory] = useState(false);
+    const [searchInput, setsearchInput] = useState('')
 
     const location = useLocation();
 
@@ -42,6 +43,13 @@ const Navbar = () => {
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
+  }
+
+  const handleSearch = (e) => {
+    e.preventDefault()
+    let action = "http://localhost:3000/pedidos?producto=" + searchInput;
+    console.log(action);
+    window.location.replace(action)
   }
 
     return (
@@ -86,13 +94,13 @@ const Navbar = () => {
             </div>
             
             <div class="column">
-                <Link to="/" class="align-items-center text-decoration-none">
+                <Link to="/webtornillero" class="align-items-center text-decoration-none">
                     <img className="logo" src={Logo} alt="Sr Tornillero Logo"/>
                 </Link>
                 <div className='search-base'>
-                    <form class="align-items-center">
+                    <form onSubmit={(e) => handleSearch(e)} class="align-items-center">
                         <div class="input-group rounded search-section">
-                            <input class="inp" placeholder="¿Qué necesitas hoy?"/>
+                            <input class="inp" placeholder="¿Qué necesitas hoy?" value={searchInput} onChange={(e) => setsearchInput(e.target.value)}/>
                         </div>
                     </form>   
                     <div class="bottom-design">
