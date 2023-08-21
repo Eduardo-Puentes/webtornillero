@@ -358,3 +358,9 @@
   
   }
   
+.notification-badge {
+  top: 15px !important;
+  left: 45px !important;
+  color: #10499c;
+  background-color: #ffda18;
+}

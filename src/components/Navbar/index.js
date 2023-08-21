@@ -6,7 +6,7 @@ import Hamburger from '../imgs/hamburger.png'
 import "./styles.css"
 import Footer from '../Footer';
 
-const Navbar = () => {
+const Navbar = ({itemsCount = 0}) => {
 
     const [isActiveOrder, setIsActiveOrder] = useState(false);
     const [isActiveDashboard, setIsActiveDashboard] = useState(false);
@@ -48,7 +48,6 @@ const Navbar = () => {
   const handleSearch = (e) => {
     e.preventDefault()
     let action = "http://localhost:3000/pedidos?producto=" + searchInput;
-    console.log(action);
     window.location.replace(action)
   }
 
@@ -56,63 +55,68 @@ const Navbar = () => {
         <>
         <nav>
         <div className="top-container">
-        <div class="navbar">
-                    <div class="navbar-container container">
+        <div className="navbar">
+                    <div className="navbar-container container">
                         <input type="checkbox" name="" id=""/>
-                        <div class="hamburger-lines">
-                            <span class="line line1"></span>
-                            <span class="line line2"></span>
-                            <span class="line line3"></span>
+                        <div className="hamburger-lines">
+                            <span className="line line1"></span>
+                            <span className="line line2"></span>
+                            <span className="line line3"></span>
                         </div>
-                        <ul class="menu-items">
-                            <li><Link to="/pedidos" class="nav-link px-2">Pedidos</Link></li>
-                            <li><Link to="/mayoristas" class="nav-link px-2">Mayoristas</Link></li>
-                            <li><Link to="/catalogo" class="nav-link px-2">Catálogo</Link></li>
-                            <li><Link to="/nosotros" class="nav-link px-2">Nosotros</Link></li>
+                        <ul className="menu-items">
+                            <li><Link to="/pedidos" className="nav-link px-2">Pedidos</Link></li>
+                            <li><Link to="/mayoristas" className="nav-link px-2">Mayoristas</Link></li>
+                            <li><Link to="/catalogo" className="nav-link px-2">Catálogo</Link></li>
+                            <li><Link to="/nosotros" className="nav-link px-2">Nosotros</Link></li>
                         </ul>
                     </div>
                 </div>
             <div className='left-side-container'>
-                <p className='contact'><i class="bi bi-telephone"></i> Llámanos: (222) 222-2222</p>
-                <p className='free-shipping'><i class="bi bi-box-seam"></i> Envío gratis después de $500</p>
+                <p className='contact'><i className="bi bi-telephone"></i> Llámanos: (222) 222-2222</p>
+                <p className='free-shipping'><i className="bi bi-box-seam"></i> Envío gratis después de $500</p>
             </div>
-            <div class="top-trapezoid"></div>
+            <div className="top-trapezoid"></div>
             <div className='right-side-container'>
                 <p className='currency'>Moneda: MXN</p>
-                <p className='contact2'><i class="bi bi-envelope"></i> Contacto</p>
-                <p className='sucursales'><i class="bi bi-geo-alt"></i> Sucursales</p>
+                <p className='contact2'><i className="bi bi-envelope"></i> Contacto</p>
+                <p className='sucursales'><i className="bi bi-geo-alt"></i> Sucursales</p>
             </div>
         </div>
-        <div class="align-items-center header g-0 columns">
-            <div class="column complements">
-                <ul class="nav justify-content-center links-list">
-                    <li><Link to="/pedidos" class="nav-link px-2">Pedidos</Link></li>
-                    <li><Link to="/mayoristas" class="nav-link px-2">Mayoristas</Link></li>
-                    <li><Link to="/catalogo" class="nav-link px-2">Catálogo</Link></li>
-                    <li><Link to="/nosotros" class="nav-link px-2">Nosotros</Link></li>
+        <div className="align-items-center header g-0 columns">
+            <div className="column complements">
+                <ul className="nav justify-content-center links-list">
+                    <li><Link to="/pedidos" className="nav-link px-2">Pedidos</Link></li>
+                    <li><Link to="/mayoristas" className="nav-link px-2">Mayoristas</Link></li>
+                    <li><Link to="/catalogo" className="nav-link px-2">Catálogo</Link></li>
+                    <li><Link to="/nosotros" className="nav-link px-2">Nosotros</Link></li>
                 </ul>
             </div>
             
-            <div class="column">
-                <Link to="/webtornillero" class="align-items-center text-decoration-none">
+            <div className="column">
+                <Link to="/webtornillero" className="align-items-center text-decoration-none">
                     <img className="logo" src={Logo} alt="Sr Tornillero Logo"/>
                 </Link>
                 <div className='search-base'>
-                    <form onSubmit={(e) => handleSearch(e)} class="align-items-center">
-                        <div class="input-group rounded search-section">
-                            <input class="inp" placeholder="¿Qué necesitas hoy?" value={searchInput} onChange={(e) => setsearchInput(e.target.value)}/>
+                    <form onSubmit={(e) => handleSearch(e)} className="align-items-center">
+                        <div className="input-group rounded search-section">
+                            <input className="inp" placeholder="¿Qué necesitas hoy?" value={searchInput} onChange={(e) => setsearchInput(e.target.value)}/>
                         </div>
                     </form>   
-                    <div class="bottom-design">
-                        <div class="trapezoid"></div>
-                        <div class="mini-trapezoid"></div>
+                    <div className="bottom-design">
+                        <div className="trapezoid"></div>
+                        <div className="mini-trapezoid"></div>
                     </div>
                 </div>
             </div>
 
-            <div class="column complements">
+            <div className="column complements">
                 <div className='user-section'>
-                    <button type="button" class="btn btn-cart"><i class="bi bi-person right-icons"></i><p className='right-text'>Mi Cuenta</p></button>
+                    <button type="button" className="btn btn-cart position-relative">
+                        <i className="bi bi-cart right-icons"></i>
+                        <span className="position-absolute start-100 translate-middle badge rounded-pill notification-badge">
+                            {itemsCount ? itemsCount : 0}
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>
