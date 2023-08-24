@@ -56,12 +56,17 @@ const Pedidos = () => {
   }
 
   const subsctractProduct = (index) => {
-    items.splice(index, 1);
+    if (items[index].quantity > 1) {
+      items[index].quantity--;
+    }
+    else {
+      deleteProduct(index);
+    }
     setItems([...items])
   }
 
   const increaseProduct = (index) => {
-    items.splice(index, 1);
+    items[index].quantity++;
     setItems([...items])
   }
   
@@ -85,6 +90,10 @@ const Pedidos = () => {
       id="phoneNumberInput"
       value={phoneInput}
       onChange={setPhoneInput}/>
+  </div>
+
+  <div>
+    <p className='desc-section'>*Si no encontrase algún producto, agrégalo, nosotros nos encargamos</p>
   </div>
 
   <div className='col-md-6'>
@@ -117,6 +126,21 @@ const Pedidos = () => {
       </div>
       <div className='product-section'>
         <p className='product-desc'>{ele[1]}</p>
+      </div>
+      <div className='product-section2'>
+        <button type="button" className="btn" onClick={() => deleteProduct(index)}><i className="bi bi-x-lg"></i></button>
+        <button type="button" className="btn" onClick={() => subsctractProduct(index)}><i className="bi bi-dash-lg"></i></button>
+        <button type="button" className="btn" onClick={() => increaseProduct(index)}><i className="bi bi-plus-lg"></i></button>
+      </div>
+    </div>
+  ))}
+  {items.map((ele, index) => (
+    <div className='item-view' key={index}>
+      <div className='product-section'>
+        <p className='product-desc'>{ele.product}</p>
+      </div>
+      <div className='product-section'>
+        <p className='product-desc'>{ele.quantity}</p>
       </div>
       <div className='product-section2'>
         <button type="button" className="btn" onClick={() => deleteProduct(index)}><i className="bi bi-x-lg"></i></button>

@@ -15,6 +15,14 @@
     background-color: aliceblue;
 }
 
+.item-view {
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-around;
+    background-color:antiquewhite
+}
+
 .product-desc {
     margin: 0;
 }
@@ -30,4 +38,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.desc-section {
+    margin: 0;
+    font-weight: 700;
 }
