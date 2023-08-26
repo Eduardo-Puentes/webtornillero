@@ -2,7 +2,6 @@ import React from 'react';
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import "./styles.css"
-import data from '../../data.json';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
@@ -33,8 +32,29 @@ const Pedidos = () => {
       localStorage.setItem("cart", localStorage.getItem("cart"));
       setCartItems(JSON.parse(localStorage.getItem("cart")))
     }
-  }, [])
+  }, [searchParams])
 
+  async function getRecord(id) {
+    try {
+      if(id !== "0") {
+        console.log(id);
+        const response = await fetch(`http://localhost:5050/record/${id}`);
+  
+        if (!response.ok) {
+            const message = `An error occurred: ${response.statusText}`;
+            window.alert(message);
+            return;
+        }
+  
+        const records = await response.json();
+        console.log(records);
+        return records
+      }
+    }
+    catch(err) {
+      console.log(err);
+    }
+  }
 
   const addProduct = () => {
     if(items.findIndex(item => item.product === productInput) !== -1) {
@@ -120,9 +140,9 @@ const Pedidos = () => {
     </div>
   </div>
   {cartItems.map((ele, index) => (
-    <div className='product-view' key={data[ele[0]].name}>
+    <div className='product-view' key={ele[0]}>
       <div className='product-section'>
-        <p className='product-desc'>{data[ele[0]].name}</p>
+        <p className='product-desc'>{ele[0]}</p>
       </div>
       <div className='product-section'>
         <p className='product-desc'>{ele[1]}</p>

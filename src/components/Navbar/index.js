@@ -47,7 +47,7 @@ const Navbar = ({itemsCount = 0}) => {
 
   const handleSearch = (e) => {
     e.preventDefault()
-    let action = "https://serverwt.onrender.com/pedidos?producto=" + searchInput;
+    let action = "http://localhost:5050/pedidos?producto=" + searchInput;
     window.location.replace(action)
   }
 
