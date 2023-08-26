@@ -38,7 +38,7 @@ const Pedidos = () => {
     try {
       if(id !== "0") {
         console.log(id);
-        const response = await fetch(`http://localhost:5050/record/${id}`);
+        const response = await fetch(`https://serverwt.onrender.com/record/${id}`);
   
         if (!response.ok) {
             const message = `An error occurred: ${response.statusText}`;
