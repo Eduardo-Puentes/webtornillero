@@ -186,7 +186,7 @@
     filter: invert(91%) sepia(57%) saturate(1040%) hue-rotate(333deg) brightness(96%) contrast(110%);
 }
 
-@media (max-width: 920px) {
+@media (max-width: 980px) {
     .links-list {
         display: none;
     }
@@ -259,7 +259,7 @@
 }
 
 
-@media (max-width: 920px) {
+@media (max-width: 980px) {
     .navbar {
       opacity: 0.95;
     }

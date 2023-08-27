@@ -1,4 +1,4 @@
-import {Route, Routes, Navigate} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import Dashboard from './components/Dashboard';
@@ -21,9 +21,19 @@ function App() {
   }, [])
   
 
-  const handleCount = () => {
-    setItemsCount(itemsCount + 1)
-    localStorage.setItem("count", itemsCount + 1)
+  const handleCount = (p=1) => {
+    setItemsCount(itemsCount + parseInt(p))
+    localStorage.setItem("count", itemsCount + parseInt(p))
+  }
+
+  const handleMCount = (m=1) => {
+    setItemsCount(itemsCount - parseInt(m))
+    localStorage.setItem("count", itemsCount - parseInt(m))
+  }
+
+  const nivelateCount = (prevVal, newVal) => {
+    setItemsCount(itemsCount + parseInt(newVal - prevVal))
+    localStorage.setItem("count", itemsCount - parseInt(newVal - prevVal))
   }
 
   return (
@@ -33,7 +43,7 @@ function App() {
         <Route path='/webtornillero' exact element={<Dashboard/>}/>
         <Route path='/mayoristas' exact element={<Mayoristas/>}/>
         <Route path='/catalogo' exact element={<Catalogo handleCount={handleCount}/>}/>
-        <Route path='/pedidos' exact element={<Pedidos/>}/>
+        <Route path='/pedidos' exact element={<Pedidos handleCount={handleCount} handleMCount={handleMCount} nivelateCount={nivelateCount}/>}/>
         <Route path='/nosotros' exact element={<Nosotros/>}/>
       </Route>}
     </Routes>

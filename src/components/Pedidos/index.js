@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-const Pedidos = () => {
+const Pedidos = ({handleCount, handleMCount, nivelateCount}) => {
 
   const [mailInput, setMailInput] = useState('')
   const [phoneInput, setPhoneInput] = useState('')
@@ -32,62 +32,89 @@ const Pedidos = () => {
       localStorage.setItem("cart", localStorage.getItem("cart"));
       setCartItems(JSON.parse(localStorage.getItem("cart")))
     }
+    if (localStorage.getItem("items") !== undefined && localStorage.getItem("items") !== null){
+      localStorage.setItem("items", localStorage.getItem("items"));
+      setItems(JSON.parse(localStorage.getItem("items")))
+    }
   }, [searchParams])
 
-  async function getRecord(id) {
-    try {
-      if(id !== "0") {
-        console.log(id);
-        const response = await fetch(`https://serverwt.onrender.com/record/${id}`);
-  
-        if (!response.ok) {
-            const message = `An error occurred: ${response.statusText}`;
-            window.alert(message);
-            return;
-        }
-  
-        const records = await response.json();
-        console.log(records);
-        return records
-      }
+  useEffect(() => {
+    if (cartItems.length > 1){
+      localStorage.setItem("cart", JSON.stringify(cartItems));
     }
-    catch(err) {
-      console.log(err);
+  }, [cartItems])
+
+  useEffect(() => {
+    if (items.length > 0) {
+      localStorage.setItem("items", JSON.stringify(items));
     }
-  }
+  }, [items])
+  
+  
 
   const addProduct = () => {
     if(items.findIndex(item => item.product === productInput) !== -1) {
       setItems(
-        items.map(item => 
-            item.product === productInput 
-            ? {...item, "quantity": quantityInput}
-            : item 
-    ))
+        items.map(item => {
+          if (item.product === productInput ){
+            nivelateCount(item.quantity, quantityInput)
+            return {...item, "quantity": quantityInput}
+          }
+          else {
+            return item 
+
+          }
+        }))
     }
     else{
       setItems([...items, {"product": productInput, "quantity": quantityInput}])
+      handleCount(quantityInput);
     }
   }
 
   const deleteProduct = (index) => {
     items.splice(index, 1);
     setItems([...items])
+    localStorage.setItem("items", JSON.stringify(items));
   }
 
   const subsctractProduct = (index) => {
-    if (items[index].quantity > 1) {
+    if (items[index].quantity - 1 > 0) {
       items[index].quantity--;
     }
     else {
       deleteProduct(index);
     }
+    handleMCount()
     setItems([...items])
   }
 
   const increaseProduct = (index) => {
     items[index].quantity++;
+    handleCount();
     setItems([...items])
+  }
+
+  const deleteProductCart = (index) => {
+    cartItems.splice(index, 1);
+    setItems([...items])
+  }
+
+  const subsctractProductCart = (index) => {
+    if (cartItems[index][1] - 1 > 0) {
+      cartItems[index][1]--;
+    }
+    else {
+      deleteProductCart(index);
+    }
+    handleMCount()
+    setCartItems([...cartItems])
+  }
+
+  const increaseProductCart = (index) => {
+    handleCount();
+    cartItems[index][1]++;
+    setCartItems([...cartItems])
   }
   
 
@@ -139,21 +166,26 @@ const Pedidos = () => {
     <div className='product-section2'>
     </div>
   </div>
-  {cartItems.map((ele, index) => (
-    <div className='product-view' key={ele[0]}>
-      <div className='product-section'>
-        <p className='product-desc'>{ele[0]}</p>
-      </div>
-      <div className='product-section'>
-        <p className='product-desc'>{ele[1]}</p>
-      </div>
-      <div className='product-section2'>
-        <button type="button" className="btn" onClick={() => deleteProduct(index)}><i className="bi bi-x-lg"></i></button>
-        <button type="button" className="btn" onClick={() => subsctractProduct(index)}><i className="bi bi-dash-lg"></i></button>
-        <button type="button" className="btn" onClick={() => increaseProduct(index)}><i className="bi bi-plus-lg"></i></button>
-      </div>
-    </div>
-  ))}
+  {cartItems.map((ele, index) => {
+    if (ele[0] !== "0") {
+      return (
+        <div className='product-view' key={ele[0]}>
+          <div className='product-section'>
+            <p className='product-desc'>{ele[2]}</p>
+          </div>
+          <div className='product-section'>
+            <p className='product-desc'>{ele[1]}</p>
+          </div>
+          <div className='product-section2'>
+            <button type="button" className="btn" onClick={() => deleteProductCart(index)}><i className="bi bi-x-lg"></i></button>
+            <button type="button" className="btn" onClick={() => subsctractProductCart(index)}><i className="bi bi-dash-lg"></i></button>
+            <button type="button" className="btn" onClick={() => increaseProductCart(index)}><i className="bi bi-plus-lg"></i></button>
+          </div>
+        </div>
+      )
+    }
+    return(<></>);
+  })}
   {items.map((ele, index) => (
     <div className='item-view' key={index}>
       <div className='product-section'>

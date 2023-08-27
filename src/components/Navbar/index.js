@@ -1,21 +1,17 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
+import { useState } from 'react';
+import { Link, Outlet } from "react-router-dom";
 import Logo from '../imgs/Logo_tornillero-1-removebg.png'
-import Hamburger from '../imgs/hamburger.png'
 import "./styles.css"
 import Footer from '../Footer';
 
 const Navbar = ({itemsCount = 0}) => {
 
-    const [isActiveOrder, setIsActiveOrder] = useState(false);
-    const [isActiveDashboard, setIsActiveDashboard] = useState(false);
-    const [isActiveInventory, setIsActiveInventory] = useState(false);
     const [searchInput, setsearchInput] = useState('')
 
-    const location = useLocation();
+    /* const location = useLocation(); */
 
-    const loadTab = (path) => {
+    /* const loadTab = (path) => {
         switch (path) {
             case 'order':
                 setIsActiveOrder(true)
@@ -37,13 +33,13 @@ const Navbar = ({itemsCount = 0}) => {
 
     useEffect(() => {
         loadTab(location.pathname.slice(1));
-    }, [])
+    }, []) */
 
-    const [showNavbar, setShowNavbar] = useState(false)
+   /*  const [showNavbar, setShowNavbar] = useState(false)
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
-  }
+  } */
 
   const handleSearch = (e) => {
     e.preventDefault()
@@ -111,12 +107,12 @@ const Navbar = ({itemsCount = 0}) => {
 
             <div className="column complements">
                 <div className='user-section'>
-                    <button type="button" className="btn btn-cart position-relative">
+                    <Link to="/pedidos" type="button" className="btn btn-cart position-relative">
                         <i className="bi bi-cart right-icons"></i>
                         <span className="position-absolute start-100 translate-middle badge rounded-pill notification-badge">
                             {itemsCount ? itemsCount : 0}
                         </span>
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

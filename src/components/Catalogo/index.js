@@ -30,7 +30,7 @@ const Catalogo = ({handleCount}) => {
         [],
     );
 
-    const addItem = (e) => {
+    const addItem = (e, c) => {
         console.log(items);
         console.log(1);
         console.log(e);
@@ -44,7 +44,7 @@ const Catalogo = ({handleCount}) => {
         }
         else {
             handleCount();
-            setItems(items => [...items, [e,1]]);
+            setItems(items => [...items, [e,1,c]]);
         }
     }
     
@@ -71,7 +71,7 @@ const Catalogo = ({handleCount}) => {
     useEffect(() => {
         async function getRecords() {
             try {
-                const response = await fetch(`https://serverwt.onrender.com/record/`);
+                const response = await fetch(`http://localhost:5050/record/`);
         
                 if (!response.ok) {
                     const message = `An error occurred: ${response.statusText}`;
@@ -102,7 +102,7 @@ const Catalogo = ({handleCount}) => {
                 name: row.name,
                 category: 0,
                 txt: <>
-                    <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>{addItem(row._id)}}>Añadir al Carrito</button>
+                    <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>{addItem(row._id, row.name)}}>Añadir al Carrito</button>
                 </>
             }
         })} enablePagination={true}
