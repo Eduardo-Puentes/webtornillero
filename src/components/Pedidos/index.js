@@ -39,7 +39,7 @@ const Pedidos = ({handleCount, handleMCount, nivelateCount}) => {
   }, [searchParams])
 
   useEffect(() => {
-    if (cartItems.length > 1){
+    if (cartItems.length > 0){
       localStorage.setItem("cart", JSON.stringify(cartItems));
     }
   }, [cartItems])

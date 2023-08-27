@@ -12,17 +12,17 @@ const Catalogo = ({handleCount}) => {
         {
             accessorKey: 'name',
             header: 'Nombre',
-            size: 150,
+            size: 350,
         },
         {
             accessorKey: 'category',
             header: 'Categoría',
-            size: 150,
+            size: 10,
         },
         {
             accessorKey: 'txt',
             header: 'Acción',
-            size: 200,
+            size: 50,
             enableColumnActions: false,
             enableSorting: false,
         },
@@ -31,6 +31,8 @@ const Catalogo = ({handleCount}) => {
     );
 
     const addItem = (e, c) => {
+        let ele = document.getElementById(e)
+        const cant = parseInt(ele.value)
         console.log(items);
         console.log(1);
         console.log(e);
@@ -38,13 +40,13 @@ const Catalogo = ({handleCount}) => {
         console.log(tmp);
         if (tmp !== 0) {
             const updatedItems = [...items]
-            updatedItems[tmp][1]++;
+            updatedItems[tmp][1] += cant;
             setItems(updatedItems)
-            handleCount();
+            handleCount(cant);
         }
         else {
-            handleCount();
-            setItems(items => [...items, [e,1,c]]);
+            handleCount(cant);
+            setItems(items => [...items, [e,cant,c]]);
         }
     }
     
@@ -100,9 +102,12 @@ const Catalogo = ({handleCount}) => {
             return {
                 id: row._id,
                 name: row.name,
-                category: 0,
+                category: "Tornillo",
                 txt: <>
-                    <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>{addItem(row._id, row.name)}}>Añadir al Carrito</button>
+                    <div class="input-group select-cant">
+                        <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>{addItem(row._id, row.name)}}>Añadir al Carrito</button>
+                        <input type="number" class="form-control" placeholder="Cantidad" defaultValue={1} min={1} id={row._id}/>
+                    </div>
                 </>
             }
         })} enablePagination={true}
