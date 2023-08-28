@@ -7,6 +7,7 @@ import Catalogo from './components/Catalogo';
 import Nosotros from './components/Nosotros';
 import Pedidos from './components/Pedidos';
 import { useEffect, useState } from 'react';
+import Contacto from './components/Contacto';
 
 function App() {
   const user = localStorage.getItem("token");
@@ -45,6 +46,7 @@ function App() {
         <Route path='/catalogo' exact element={<Catalogo handleCount={handleCount}/>}/>
         <Route path='/pedidos' exact element={<Pedidos handleCount={handleCount} handleMCount={handleMCount} nivelateCount={nivelateCount}/>}/>
         <Route path='/nosotros' exact element={<Nosotros/>}/>
+        <Route path='/contact' exact element={<Contacto/>}/>
       </Route>}
     </Routes>
     </div>

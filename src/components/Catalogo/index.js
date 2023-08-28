@@ -104,9 +104,9 @@ const Catalogo = ({handleCount}) => {
                 name: row.name,
                 category: "Tornillo",
                 txt: <>
-                    <div class="input-group select-cant">
+                    <div className="input-group select-cant">
                         <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>{addItem(row._id, row.name)}}>Añadir al Carrito</button>
-                        <input type="number" class="form-control" placeholder="Cantidad" defaultValue={1} min={1} id={row._id}/>
+                        <input type="number" className="form-control" placeholder="Cantidad" defaultValue={1} min={1} id={row._id}/>
                     </div>
                 </>
             }

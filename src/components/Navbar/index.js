@@ -60,8 +60,8 @@ const Navbar = ({itemsCount = 0}) => {
                             <span className="line line3"></span>
                         </div>
                         <ul className="menu-items">
-                            <li><Link to="/pedidos" className="nav-link px-2">Pedidos</Link></li>
-                            <li><Link to="/mayoristas" className="nav-link px-2">Mayoristas</Link></li>
+                            <li><Link to="/webtornillero" className="nav-link px-2">Inicio</Link></li>
+                            <li><Link to="/contact" className="nav-link px-2">Contacto</Link></li>
                             <li><Link to="/catalogo" className="nav-link px-2">Catálogo</Link></li>
                             <li><Link to="/nosotros" className="nav-link px-2">Nosotros</Link></li>
                         </ul>
@@ -81,10 +81,9 @@ const Navbar = ({itemsCount = 0}) => {
         <div className="align-items-center header g-0 columns">
             <div className="column complements">
                 <ul className="nav justify-content-center links-list">
-                    <li><Link to="/pedidos" className="nav-link px-2">Pedidos</Link></li>
-                    <li><Link to="/mayoristas" className="nav-link px-2">Mayoristas</Link></li>
+                    <li><Link to="/webtornillero" className="nav-link px-2">Inicio</Link></li>
+                    <li><Link to="/contact" className="nav-link px-2">Contacto</Link></li>
                     <li><Link to="/catalogo" className="nav-link px-2">Catálogo</Link></li>
-                    <li><Link to="/nosotros" className="nav-link px-2">Nosotros</Link></li>
                 </ul>
             </div>
             

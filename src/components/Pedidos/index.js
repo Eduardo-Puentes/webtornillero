@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import emailjs from '@emailjs/browser';
+import ReactDOMServer from 'react-dom/server'
+import toast, { Toaster } from 'react-hot-toast';
 import "./styles.css"
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -21,6 +24,8 @@ const Pedidos = ({handleCount, handleMCount, nivelateCount}) => {
   const [searchParams] = useSearchParams();
 
   const [cartItems, setCartItems] = useState([])
+
+  const form = useRef();
 
   useEffect(() => {
     document.getElementById("phoneNumberInput").classList.add("form-control")
@@ -116,12 +121,54 @@ const Pedidos = ({handleCount, handleMCount, nivelateCount}) => {
     cartItems[index][1]++;
     setCartItems([...cartItems])
   }
+
+  const sendEmail = (e) => {
+    toast('Cargando...')
+    e.preventDefault();
+
+    const textTo = ReactDOMServer.renderToString(
+      <table>
+<tr>
+  <th>Company</th>
+  <th>Contact</th>
+  <th>Country</th>
+</tr>
+<tr>
+  <td>Alfreds Futterkiste</td>
+  <td>Maria Anders</td>
+  <td>Germany</td>
+</tr>
+<tr>
+  <td>Centro comercial Moctezuma</td>
+  <td>Francisco Chang</td>
+  <td>Mexico</td>
+</tr>
+</table>)
+
+  console.log(form.current.user_name.value);
+
+  var templateParams = {
+      user_name: form.current.user_name.value,
+      user_email: form.current.user_email.value,
+      text: textTo
+  };
+
+  emailjs.send('service_1twye69', 'template_bs489bb', templateParams, 'z5OjS3KJIHi-8AIA4')
+    .then((result) => {
+        console.log(result.text);
+        toast('Mensaje Enviado')
+    }, (error) => {
+        console.log(error.text);
+        toast('Un error a ocurrido')
+    });
+  };
   
 
     return (
         <>
+        <Toaster/>
         <div className='contact-container'>
-        <form className="row g-3">
+        <form className="row g-3" ref={form} onSubmit={sendEmail}>
           <div className='col-12'>
             <h4>Datos de Pedido</h4>
           </div>

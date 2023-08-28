@@ -14,16 +14,10 @@ const Footer = () => {
         </div>
 
         <div>
-          <a href='' className='me-4 text-reset'>
+          <a href='https://www.facebook.com/' className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='facebook-f' />
           </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='twitter' />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon color='secondary' fab icon='google' />
-          </a>
-          <a href='' className='me-4 text-reset'>
+          <a href='https://www.instagram.com/' className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='instagram' />
           </a>
         </div>
@@ -110,9 +104,9 @@ const Footer = () => {
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
         © 2023 Copyright: 
-        <a className='text-reset fw-bold px-1' href=''>
+        <Link className='text-reset fw-bold px-1' to='/webtornillero'>
           Señor Tornillero
-        </a>
+        </Link>
       </div>
     </MDBFooter>
         </>

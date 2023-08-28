@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import "./styles.css"
 import FreeShipping from '../imgs/entrega-gratis.avif'
 import Safe from '../imgs/99665.png'
 import Support from '../imgs/839961.png'
 import Discount from '../imgs/879757.png'
-import SafeCard from '../imgs/6993594.png'
+import Contacto from '../Contacto';
 
 const Dashboard = () => {
 
@@ -25,7 +26,7 @@ const Dashboard = () => {
                 <div className="carousel-caption text-end">
                     <h1>Encuentra todo lo que necesites</h1>
                     <p>Nuestro catálogo tiene todo lo que buscas, aquí podras encontrar lo que necesites.</p>
-                    <p><a className="btn btn-lg btn-primary" href="#">Catálogo</a></p>
+                    <p><Link className="btn btn-lg btn-primary" to="/catalogo">Catálogo</Link></p>
                 </div>
                 </div>
             </div>
@@ -37,7 +38,7 @@ const Dashboard = () => {
                 <div className="carousel-caption">
                     <h1>¿Tienes dudas?</h1>
                     <p>No dudes en contactarnos, envíanos un mensaje por la web o llámanos.</p>
-                    <p><a className="btn btn-lg btn-primary" href="#">Contacto</a></p>
+                    <p><Link className="btn btn-lg btn-primary" to="/contact">Contacto</Link></p>
                 </div>
                 </div>
             </div>
@@ -50,7 +51,7 @@ const Dashboard = () => {
                 <div className="carousel-caption text-start">
                     <h1>¿Buscas comprar en gran cantidad?</h1>
                     <p>Da click para obtener una cotización instantanea.</p>
-                    <p><a className="btn btn-lg btn-primary" href="#">Cotizar</a></p>
+                    <p><Link className="btn btn-lg btn-primary" to="/pedidos">Cotizar</Link></p>
                 </div>
                 </div>
             </div>
@@ -67,20 +68,26 @@ const Dashboard = () => {
         </div>
         <div className="container">
     </div>
+
         <div className="row row-cols-1 row-cols-lg-1 row-cols-md-1 row-cols-sm-1 plus-section">
             <div className="col sols">
-                <img src={FreeShipping} className="plus-section-icons m-3 crop-icon"></img><span className='plus-section-text'>Envío Gratis</span>
+                <img alt="Free Shipping Icon" src={FreeShipping} className="plus-section-icons m-3 crop-icon"></img><span className='plus-section-text'>Envío Gratis</span>
             </div>
             <div className="col sols">
-                <img src={Safe} className="plus-section-icons m-3"></img><span className='plus-section-text'>100% Seguro</span>
+                <img alt="Secure Icon" src={Safe} className="plus-section-icons m-3"></img><span className='plus-section-text'>100% Seguro</span>
             </div>
             <div className="col sols">
-                <img src={Discount} className="plus-section-icons m-3"></img><span className='plus-section-text'>Descuento Mayorista</span>
+                <img alt="Discount Icon" src={Discount} className="plus-section-icons m-3"></img><span className='plus-section-text'>Descuento Mayorista</span>
             </div>
             <div className="col sols">
-                <img src={Support} className="plus-section-icons m-3"></img><span className='plus-section-text'>Soporte 24/7</span>
+                <img alt="Support Icon" src={Support} className="plus-section-icons m-3"></img><span className='plus-section-text'>Soporte 24/7</span>
             </div>
         </div>
+
+        <div>
+            <Contacto/>
+        </div>
+
         
         <div className="container">
 
