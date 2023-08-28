@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import toast, { Toaster } from 'react-hot-toast';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./styles.css"
 
 const Contacto = () => {
@@ -14,10 +15,10 @@ const Contacto = () => {
         emailjs.sendForm('service_1twye69', 'template_hhm8pcv', form.current, 'z5OjS3KJIHi-8AIA4')
           .then((result) => {
               console.log(result.text);
-              toast('Mensaje Enviado')
+              toast.success('Mensaje Enviado')
           }, (error) => {
               console.log(error.text);
-              toast('Un error a ocurrido')
+              toast.error('Un error a ocurrido')
           });
       };
 
@@ -25,7 +26,7 @@ const Contacto = () => {
         <>
         <div className="contact-form">
 
-        <Toaster/>
+        <ToastContainer />
 <h2 className="h1-responsive font-weight-bold text-center my-4">Contáctanos</h2>
 <p className="text-center w-responsive mx-auto mb-5">¿Buscas algo en específico o cotizaciones personalizadas? No dudes en contaactarnos.</p>
 
