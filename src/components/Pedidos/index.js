@@ -81,6 +81,13 @@ const Pedidos = ({handleCount, handleMCount, nivelateCount}) => {
     }
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   const deleteProduct = (index) => {
     handleMCount(items[index].quantity)
     items.splice(index, 1);
@@ -130,7 +137,7 @@ const Pedidos = ({handleCount, handleMCount, nivelateCount}) => {
   }
 
   const sendEmail = (e) => {
-    toast('Cargando...')
+    const load = toast('Cargando...')
     e.preventDefault();
 
     const textTo0 = ReactDOMServer.renderToString(<>
@@ -197,9 +204,11 @@ const Pedidos = ({handleCount, handleMCount, nivelateCount}) => {
   emailjs.send('service_1twye69', 'template_bs489bb', templateParams, 'z5OjS3KJIHi-8AIA4')
     .then((result) => {
         console.log(result.text);
+        toast.dismiss(load);
         toast.success('Mensaje Enviado')
     }, (error) => {
         console.log(error.text);
+        toast.dismiss(load);
         toast.error('Un error a ocurrido')
     });
   };
@@ -319,7 +328,7 @@ const Pedidos = ({handleCount, handleMCount, nivelateCount}) => {
     <input required type="text" className="form-control" id="inputZip" value={zipInput} onChange={e=>setZipInput(e.target.value)}/>
   </div>
   <div className="col-12">
-    <button type="submit" className="btn btn-primary">Enviar Pedido</button>
+    <button type="submit" className="btn btn-primary" onClick={scrollToTop}>Enviar Pedido</button>
   </div>
 </form>
         </div>
