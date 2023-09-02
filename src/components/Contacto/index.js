@@ -85,15 +85,15 @@ const Contacto = () => {
         <div className="col-md-3 text-center">
         <ul className="list-unstyled mb-0">
             <li><i className="fas fa-map-marker-alt fa-2x"></i>
-                <p>San Francisco, CA 94126, USA</p>
+                <p>PLAZA ESTRELLA, Av. Paseo Constituyentes 1690, PUEBLITO VILLA, 76900 El Pueblito, Qro.</p>
             </li>
 
             <li><i className="fas fa-phone mt-4 fa-2x"></i>
-                <p>+ 01 234 567 89</p>
+                <p>+52 1 442 207 6173</p>
             </li>
 
             <li><i className="fas fa-envelope mt-4 fa-2x"></i>
-                <p>contact@mdbootstrap.com</p>
+                <p>yaelrvherrera@grupcomhp.com</p>
             </li>
         </ul>
         </div>

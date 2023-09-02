@@ -82,47 +82,31 @@ const Dashboard = () => {
             </div>
         </div>
 
-        <div className='row row-cols-1 row-cols-sm-2 plus-section m-0'>
-            <div className='solsis p-0 values-container'>
-                <p>Nuestra misión es proporcionar el mejor y mayor surtido en tornillería, basado en el mejor precio del mercado, calidad y servicio. La cultura de nuestro grupo proporciona soluciones para todos nuestros clientes, generando una buena experiencia de compra.</p>
-            </div>
+        <div className='row row-cols-1 row-cols-md-2 plus-section m-0'>
             <div className='solsis p-0 values-container' style={{backgroundColor: "#000", position: "relative"}}>
                 <img className='mission-picture' alt='Mission' src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'/>
                 <div className='img-text'>
                         <h2 style={{color: "#fff"}} >Misión</h2>
                     </div>
             </div>
-        </div>
-
-        <div>
-            <div class="row m-0 values-container">
-                <div class="col-sm p-0" style={{position: "relative"}}>
-                    <div className='img-text'>
-                        <p>Nuestra misión es proporcionar el mejor y mayor surtido en tornillería, basado en el mejor precio del mercado, calidad y servicio. La cultura de nuestro grupo proporciona soluciones para todos nuestros clientes, generando una buena experiencia de compra.</p>
-                    </div>
-                </div>
-                <div class="col-sm p-0" style={{backgroundColor: "#000", position: "relative"}}>
-                    <img className='mission-picture' alt='Mission' src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'/>
-                    <div className='img-text'>
-                        <h2 style={{color: "#fff"}} >Misión</h2>
-                    </div>
+            <div className='solsis p-0 values-container' style={{position: "relative"}}>
+                <div className='img-text'>
+                <p>Nuestra misión es proporcionar el mejor y mayor surtido en tornillería, basado en el mejor precio del mercado, calidad y servicio. La cultura de nuestro grupo proporciona soluciones para todos nuestros clientes, generando una buena experiencia de compra.</p>
                 </div>
             </div>
         </div>
 
-        <div>
-            <div class="row m-0 values-container">
-                <div class="col-sm p-0" style={{backgroundColor: "#000", position: "relative"}}>
-                    <img className='mission-picture' alt='Vision' src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'/>
-                    <div className='img-text'>
+        <div className='row row-cols-1 row-cols-md-2 plus-section m-0'>
+            <div className='solsis p-0 values-container' style={{position: "relative"}}>
+                <div className='img-text'>
+                <p>Nuestra visión es ser una empresa con alta calidad de servicio al cliente, que cuente con la mayor cantidad de socios comerciales, logrando así ser una de las mejores opciones en el mercado de tornillería a nivel nacional.</p>
+                </div>
+            </div>
+            <div className='solsis p-0 values-container' style={{backgroundColor: "#000", position: "relative"}}>
+                <img className='mission-picture' alt='Vision' src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'/>
+                <div className='img-text'>
                         <h2 style={{color: "#fff"}} >Visión</h2>
                     </div>
-                </div>
-                <div class="col-sm p-0" style={{position: "relative"}}>
-                    <div className='img-text'>
-                        <p>Nuestra visión es ser una empresa con alta calidad de servicio al cliente, que cuente con la mayor cantidad de socios comerciales, logrando así ser una de las mejores opciones en el mercado de tornillería a nivel nacional.</p>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -130,6 +114,7 @@ const Dashboard = () => {
             <Contacto/>
         </div>
 
+        <iframe title='Maps Embeeded' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119561.90599859795!2d-100.52015897969135!3d20.53451123592089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d345c704ffdf87%3A0x74a0054d0a1fde09!2sSE%C3%91OR%20TORNILLERO!5e0!3m2!1ses-419!2smx!4v1693664902716!5m2!1ses-419!2smx" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         
         </>
     )
