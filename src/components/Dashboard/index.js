@@ -82,8 +82,20 @@ const Dashboard = () => {
             </div>
         </div>
 
+        <div className='row row-cols-1 row-cols-sm-2 plus-section m-0'>
+            <div className='solsis p-0 values-container'>
+                <p>Nuestra misión es proporcionar el mejor y mayor surtido en tornillería, basado en el mejor precio del mercado, calidad y servicio. La cultura de nuestro grupo proporciona soluciones para todos nuestros clientes, generando una buena experiencia de compra.</p>
+            </div>
+            <div className='solsis p-0 values-container' style={{backgroundColor: "#000", position: "relative"}}>
+                <img className='mission-picture' alt='Mission' src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'/>
+                <div className='img-text'>
+                        <h2 style={{color: "#fff"}} >Misión</h2>
+                    </div>
+            </div>
+        </div>
+
         <div>
-            <div class="row m-0">
+            <div class="row m-0 values-container">
                 <div class="col-sm p-0" style={{position: "relative"}}>
                     <div className='img-text'>
                         <p>Nuestra misión es proporcionar el mejor y mayor surtido en tornillería, basado en el mejor precio del mercado, calidad y servicio. La cultura de nuestro grupo proporciona soluciones para todos nuestros clientes, generando una buena experiencia de compra.</p>
@@ -99,7 +111,7 @@ const Dashboard = () => {
         </div>
 
         <div>
-            <div class="row m-0">
+            <div class="row m-0 values-container">
                 <div class="col-sm p-0" style={{backgroundColor: "#000", position: "relative"}}>
                     <img className='mission-picture' alt='Vision' src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'/>
                     <div className='img-text'>

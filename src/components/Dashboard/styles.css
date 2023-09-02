@@ -19,6 +19,10 @@
     width: auto;
 }
 
+.sols {
+    width: 50vw;
+}
+
 .plus-section {
     width: 100%;
     display: flex;
@@ -57,7 +61,7 @@
     color: white;
     opacity: .4;
     width: 100%;
-    height: calc(100vh / 2);
+    height: 50vh;
     object-fit: cover;
 }
 
@@ -67,4 +71,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+.values-container {
+    height: 50vh;
 }
