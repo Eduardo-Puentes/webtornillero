@@ -43,7 +43,7 @@ const Navbar = ({itemsCount = 0}) => {
 
   const handleSearch = (e) => {
     e.preventDefault()
-    let action = "https://serverwt.onrender.com/pedidos?producto=" + searchInput;
+    let action = "http://localhost:3000/pedidos?producto=" + searchInput;
     window.location.replace(action)
   }
 
@@ -63,7 +63,7 @@ const Navbar = ({itemsCount = 0}) => {
                             <li><Link to="/webtornillero" className="nav-link px-2">Inicio</Link></li>
                             <li><Link to="/contact" className="nav-link px-2">Contacto</Link></li>
                             <li><Link to="/catalogo" className="nav-link px-2">Catálogo</Link></li>
-                            <li><Link to="/nosotros" className="nav-link px-2">Nosotros</Link></li>
+                            <li><Link to="/pedidos" className="nav-link px-2">Carrito</Link></li>
                         </ul>
                     </div>
                 </div>

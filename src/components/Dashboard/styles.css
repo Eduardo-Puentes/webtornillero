@@ -50,3 +50,21 @@
     width: 80%;
     margin: auto;
 }
+
+.mission-picture {
+    position: relative;
+    text-align: center;
+    color: white;
+    opacity: .4;
+    width: 100%;
+    height: calc(100vh / 2);
+    object-fit: cover;
+}
+
+.img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

@@ -10,6 +10,11 @@ const Catalogo = ({handleCount}) => {
     const columns = useMemo(
         () => [
         {
+            accessorKey: 'img',
+            header: 'Imagen',
+            size: 50,
+        },
+        {
             accessorKey: 'name',
             header: 'Nombre',
             size: 350,
@@ -101,14 +106,17 @@ const Catalogo = ({handleCount}) => {
         <MaterialReactTable columns={columns} data={records.map(row => {
             return {
                 id: row._id,
+                img: <>
+                        <img alt='Product' src={row.img} style={{width: "100px"}}/>
+                    </>,
                 name: row.name,
-                category: "Tornillo",
+                category: row.name ? row.name.split(' ')[0][0].toUpperCase() + row.name.split(' ')[0].slice(1).toLowerCase(): "",
                 txt: <>
-                    <div className="input-group select-cant">
-                        <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>{addItem(row._id, row.name)}}>Añadir al Carrito</button>
-                        <input type="number" className="form-control" placeholder="Cantidad" defaultValue={1} min={1} id={row._id}/>
-                    </div>
-                </>
+                        <div className="input-group select-cant">
+                            <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>{addItem(row._id, row.name)}}>Añadir al Carrito</button>
+                            <input type="number" className="form-control" placeholder="Cantidad" defaultValue={1} min={1} id={row._id}/>
+                        </div>
+                    </>
             }
         })} enablePagination={true}
                 localization={MRT_Localization_ES}/>

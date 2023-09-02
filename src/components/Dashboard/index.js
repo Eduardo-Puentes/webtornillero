@@ -66,10 +66,8 @@ const Dashboard = () => {
             <span className="visually-hidden">Next</span>
             </button>
         </div>
-        <div className="container">
-    </div>
 
-        <div className="row row-cols-1 row-cols-lg-1 row-cols-md-1 row-cols-sm-1 plus-section">
+        <div className="row row-cols-1 row-cols-lg-1 row-cols-md-1 row-cols-sm-1 plus-section my-3">
             <div className="col sols">
                 <img alt="Free Shipping Icon" src={FreeShipping} className="plus-section-icons m-3 crop-icon"></img><span className='plus-section-text'>Envío Gratis</span>
             </div>
@@ -84,132 +82,37 @@ const Dashboard = () => {
             </div>
         </div>
 
-        <div className="container">
-
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
-                <div className="col">
-                <div className="card shadow-sm">
-                    <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-                    <div className="card-body">
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                        <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                        </div>
-                        <small className="text-body-secondary">9 mins</small>
-                    </div>
+        <div>
+            <div class="row m-0">
+                <div class="col-sm p-0" style={{position: "relative"}}>
+                    <div className='img-text'>
+                        <p>Nuestra misión es proporcionar el mejor y mayor surtido en tornillería, basado en el mejor precio del mercado, calidad y servicio. La cultura de nuestro grupo proporciona soluciones para todos nuestros clientes, generando una buena experiencia de compra.</p>
                     </div>
                 </div>
-                </div>
-                <div className="col">
-                <div className="card shadow-sm">
-                    <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-                    <div className="card-body">
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                        <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                        </div>
-                        <small className="text-body-secondary">9 mins</small>
+                <div class="col-sm p-0" style={{backgroundColor: "#000", position: "relative"}}>
+                    <img className='mission-picture' alt='Mission' src='https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'/>
+                    <div className='img-text'>
+                        <h2 style={{color: "#fff"}} >Misión</h2>
                     </div>
-                    </div>
-                </div>
-                </div>
-                <div className="col">
-                <div className="card shadow-sm">
-                    <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-                    <div className="card-body">
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                        <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                        </div>
-                        <small className="text-body-secondary">9 mins</small>
-                    </div>
-                    </div>
-                </div>
-                </div>
-                <div className="col">
-                <div className="card shadow-sm">
-                    <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-                    <div className="card-body">
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                        <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                        </div>
-                        <small className="text-body-secondary">9 mins</small>
-                    </div>
-                    </div>
-                </div>
-                </div>
-
-                <div className="col">
-                <div className="card shadow-sm">
-                    <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-                    <div className="card-body">
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                        <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                        </div>
-                        <small className="text-body-secondary">9 mins</small>
-                    </div>
-                    </div>
-                </div>
-                </div>
-                <div className="col">
-                <div className="card shadow-sm">
-                    <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-                    <div className="card-body">
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                        <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                        </div>
-                        <small className="text-body-secondary">9 mins</small>
-                    </div>
-                    </div>
-                </div>
-                </div>
-                <div className="col">
-                <div className="card shadow-sm">
-                    <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-                    <div className="card-body">
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                        <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                        </div>
-                        <small className="text-body-secondary">9 mins</small>
-                    </div>
-                    </div>
-                </div>
-                </div>
-                <div className="col">
-                <div className="card shadow-sm">
-                    <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-                    <div className="card-body">
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div className="d-flex justify-content-between align-items-center">
-                        <div className="btn-group">
-                        <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                        </div>
-                        <small className="text-body-secondary">9 mins</small>
-                    </div>
-                    </div>
-                </div>
                 </div>
             </div>
+        </div>
+
+        <div>
+            <div class="row m-0">
+                <div class="col-sm p-0" style={{backgroundColor: "#000", position: "relative"}}>
+                    <img className='mission-picture' alt='Vision' src='https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'/>
+                    <div className='img-text'>
+                        <h2 style={{color: "#fff"}} >Visión</h2>
+                    </div>
+                </div>
+                <div class="col-sm p-0" style={{position: "relative"}}>
+                    <div className='img-text'>
+                        <p>Nuestra visión es ser una empresa con alta calidad de servicio al cliente, que cuente con la mayor cantidad de socios comerciales, logrando así ser una de las mejores opciones en el mercado de tornillería a nivel nacional.</p>
+                    </div>
+                </div>
             </div>
+        </div>
 
         <div>
             <Contacto/>

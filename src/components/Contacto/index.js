@@ -24,15 +24,16 @@ const Contacto = () => {
 
     return (
         <>
+        <div className='form-container'>
         <div className="contact-form">
 
         <ToastContainer />
-<h2 className="h1-responsive font-weight-bold text-center my-4">Contáctanos</h2>
-<p className="text-center w-responsive mx-auto mb-5">¿Buscas algo en específico o cotizaciones personalizadas? No dudes en contaactarnos.</p>
+        <h2 className="h1-responsive font-weight-bold text-center my-4">Contáctanos</h2>
+        <p className="text-center w-responsive mx-auto mb-5">¿Buscas algo en específico o cotizaciones personalizadas? No dudes en contaactarnos.</p>
 
-<div className="row g-0">
+        <div className="row g-0">
 
-    <div className="col-md-9 mb-5">
+        <div className="col-md-9 mb-5">
         <form id="contact-form" name="contact-form" ref={form} onSubmit={sendEmail}>
 
             <div className="row">
@@ -79,9 +80,9 @@ const Contacto = () => {
             </div>
         </form>
         <div className="status"></div>
-    </div>
+        </div>
 
-    <div className="col-md-3 text-center">
+        <div className="col-md-3 text-center">
         <ul className="list-unstyled mb-0">
             <li><i className="fas fa-map-marker-alt fa-2x"></i>
                 <p>San Francisco, CA 94126, USA</p>
@@ -95,11 +96,12 @@ const Contacto = () => {
                 <p>contact@mdbootstrap.com</p>
             </li>
         </ul>
-    </div>
+        </div>
 
-</div>
+        </div>
 
-</div>
+        </div>
+        </div>
         </>
     )
 }
