@@ -33,11 +33,17 @@
     align-items: center;
     justify-content: center;
 }
+
 .product-section2 {
     width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+@media (min-width: 700px) {
+    .product-section2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .desc-section {
