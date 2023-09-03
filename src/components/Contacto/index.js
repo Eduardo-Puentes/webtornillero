@@ -33,7 +33,7 @@ const Contacto = () => {
 
         <div className="row g-0">
 
-        <div className="col-md-9 mb-5">
+        <div>
         <form id="contact-form" name="contact-form" ref={form} onSubmit={sendEmail}>
 
             <div className="row">
@@ -82,21 +82,29 @@ const Contacto = () => {
         <div className="status"></div>
         </div>
 
-        <div className="col-md-3 text-center">
-        <ul className="list-unstyled mb-0">
-            <li><i className="fas fa-map-marker-alt fa-2x"></i>
-                <p>PLAZA ESTRELLA, Av. Paseo Constituyentes 1690, PUEBLITO VILLA, 76900 El Pueblito, Qro.</p>
-            </li>
-
-            <li><i className="fas fa-phone mt-4 fa-2x"></i>
-                <p>+52 1 442 207 6173</p>
-            </li>
-
-            <li><i className="fas fa-envelope mt-4 fa-2x"></i>
-                <p>yaelrvherrera@grupcomhp.com</p>
-            </li>
-        </ul>
+        <div className="row row-cols-1 plus-section-plus my-3 text-center">
+            <div className="col solsis2">
+                <div><i className="bi bi-geo-alt fa-2x"></i>
+                    <p>PLAZA ESTRELLA, Av. Paseo Constituyentes 1690, PUEBdivTO VILLA, 76900 El Pueblito, Qro.</p>
+                </div>
+            </div>
+            <div className="col solsis2">
+                <div><i className="bi bi-telephone mt-4 fa-2x"></i>
+                    <p>+52 1 442 717 7372</p>
+                </div>
+            </div>
+            <div className="col solsis2">
+                <div><i class="bi bi-whatsapp mt-4 fa-2x"></i>
+                    <p>+52 1 442 207 6173</p>
+                </div>
+            </div>
+            <div className="col solsis2">
+                <div><i className="bi bi-envelope mt-4 fa-2x"></i>
+                    <p style={{marginLeft:"-16px"}}>yaelrvherrera@grupcomhp.com</p>
+                </div>
+            </div>
         </div>
+
 
         </div>
 
