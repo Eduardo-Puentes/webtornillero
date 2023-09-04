@@ -17,7 +17,7 @@ const Footer = () => {
           <a href='https://www.facebook.com/' className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='facebook-f' />
           </a>
-          <a href='https://www.instagram.com/' className='me-4 text-reset'>
+          <a href='https://www.instagram.com/sr.tornillero' className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='instagram' />
           </a>
         </div>
@@ -84,18 +84,18 @@ const Footer = () => {
               </p>
             </MDBCol>
 
-            <MDBCol md='4' lg='3' xl='3' className='mx-auto mb-md-0 mb-4'>
+            <MDBCol md='5' lg='4' xl='4' className='mx-auto mb-md-0 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Contacto</h6>
               <p>
                 <MDBIcon color='secondary' icon='home' className='me-2' />
-                Qro, 10012, México
+                76900 El Pueblito, Qro, México
               </p>
               <p>
                 <MDBIcon color='secondary' icon='envelope' className='me-3' />
-                info@mail.com
+                yaelrvherrera@grupcomhp.com
               </p>
               <p>
-                <MDBIcon color='secondary' icon='phone' className='me-3' />+52(222) 222-2222
+                <MDBIcon color='secondary' icon='phone' className='me-3' />+52 1 (442) 717-7372
               </p>
             </MDBCol>
           </MDBRow>

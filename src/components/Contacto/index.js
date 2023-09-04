@@ -85,7 +85,7 @@ const Contacto = () => {
         <div className="row row-cols-1 plus-section-plus my-3 text-center">
             <div className="col solsis2">
                 <div><i className="bi bi-geo-alt fa-2x"></i>
-                    <p>PLAZA ESTRELLA, Av. Paseo Constituyentes 1690, PUEBdivTO VILLA, 76900 El Pueblito, Qro.</p>
+                    <p>PLAZA ESTRELLA, Av. Paseo Constituyentes 1690, PUEBLITO VILLA, 76900 El Pueblito, Qro.</p>
                 </div>
             </div>
             <div className="col solsis2">

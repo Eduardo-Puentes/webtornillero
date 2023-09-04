@@ -67,16 +67,9 @@ const Navbar = ({itemsCount = 0}) => {
                         </ul>
                     </div>
                 </div>
-            <div className='left-side-container'>
-                <p className='contact'><i className="bi bi-telephone"></i> Llámanos: (222) 222-2222</p>
-                <p className='free-shipping'><i className="bi bi-box-seam"></i> Envío gratis después de $500</p>
-            </div>
+
             <div className="top-trapezoid"></div>
-            <div className='right-side-container'>
-                <p className='currency'>Moneda: MXN</p>
-                <p className='contact2'><i className="bi bi-envelope"></i> Contacto</p>
-                <p className='sucursales'><i className="bi bi-geo-alt"></i> Sucursales</p>
-            </div>
+
         </div>
         <div className="align-items-center header g-0 columns">
             <div className="column complements">
