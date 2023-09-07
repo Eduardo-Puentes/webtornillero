@@ -53,7 +53,7 @@ const Navbar = ({itemsCount = 0}) => {
         <div className="top-container">
         <div className="navbar">
                     <div className="navbar-container container">
-                        <label for="burgir" style={{display: "none"}}>Expand
+                        <label for="burgir">
                             <input type="checkbox" name="burgir" id="burgir"/>
                         </label>
                         <div className="hamburger-lines">
