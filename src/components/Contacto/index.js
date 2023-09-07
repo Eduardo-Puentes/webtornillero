@@ -94,7 +94,7 @@ const Contacto = () => {
                 </div>
             </div>
             <div className="col solsis2">
-                <div><i class="bi bi-whatsapp mt-4 fa-2x"></i>
+                <div><i className="bi bi-whatsapp mt-4 fa-2x"></i>
                     <p>+52 1 442 207 6173</p>
                 </div>
             </div>

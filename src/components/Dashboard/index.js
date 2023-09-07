@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import "./styles.css"
-import FreeShipping from '../imgs/entrega-gratis.avif'
 import Safe from '../imgs/99665.png'
 import Support from '../imgs/839961.png'
 import Discount from '../imgs/879757.png'
@@ -69,9 +68,6 @@ const Dashboard = () => {
 
         <div className="row row-cols-1 row-cols-lg-1 row-cols-md-1 row-cols-sm-1 plus-section my-3">
             <div className="col sols">
-                <img alt="Free Shipping Icon" src={FreeShipping} className="plus-section-icons m-3 crop-icon"></img><span className='plus-section-text'>Envío Gratis</span>
-            </div>
-            <div className="col sols">
                 <img alt="Secure Icon" src={Safe} className="plus-section-icons m-3"></img><span className='plus-section-text'>100% Seguro</span>
             </div>
             <div className="col sols">
@@ -115,7 +111,7 @@ const Dashboard = () => {
         </div>
 
         <div className='maps-container'>
-            <iframe title='Maps Embeeded' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119561.90599859795!2d-100.52015897969135!3d20.53451123592089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d345c704ffdf87%3A0x74a0054d0a1fde09!2sSE%C3%91OR%20TORNILLERO!5e0!3m2!1ses-419!2smx!4v1693664902716!5m2!1ses-419!2smx" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe title='Maps Embeeded' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119561.90599859795!2d-100.52015897969135!3d20.53451123592089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d345c704ffdf87%3A0x74a0054d0a1fde09!2sSE%C3%91OR%20TORNILLERO!5e0!3m2!1ses-419!2smx!4v1693664902716!5m2!1ses-419!2smx" width="600" height="450" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>        
         </>
     )

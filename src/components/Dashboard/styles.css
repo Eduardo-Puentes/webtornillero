@@ -32,6 +32,7 @@
 
 .plus-section-icons {
     height: 50px;
+    width: 50px;
     filter: invert(19%) sepia(99%) saturate(1809%) hue-rotate(205deg) brightness(89%) contrast(92%);
 }
 

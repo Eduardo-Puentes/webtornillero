@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link, Outlet } from "react-router-dom";
-import Logo from '../imgs/Logo_tornillero-1-removebg.png'
+import Logo from '../imgs/Logo_tornillero-1-removebg (1).png'
 import "./styles.css"
 import Footer from '../Footer';
 

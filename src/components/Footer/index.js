@@ -17,7 +17,7 @@ const Footer = () => {
           <a href='https://www.facebook.com/' className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='facebook-f' />
           </a>
-          <a href='https://www.instagram.com/sr.tornillero' className='me-4 text-reset'>
+          <a href='https://www.instagram.com/sr.tornillero' rel="noreferrer" target="_blank" className='me-4 text-reset'>
             <MDBIcon color='secondary' fab icon='instagram' />
           </a>
         </div>
