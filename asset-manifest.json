@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/webtornillero/static/css/main.656c124b.css",
-    "main.js": "/webtornillero/static/js/main.86ba95a4.js",
+    "main.js": "/webtornillero/static/js/main.81811f34.js",
     "static/media/Logo_tornillero-1-removebg (1).png": "/webtornillero/static/media/Logo_tornillero-1-removebg (1).1824b93b980711c6998d.png",
     "index.html": "/webtornillero/index.html",
     "main.656c124b.css.map": "/webtornillero/static/css/main.656c124b.css.map",
-    "main.86ba95a4.js.map": "/webtornillero/static/js/main.86ba95a4.js.map"
+    "main.81811f34.js.map": "/webtornillero/static/js/main.81811f34.js.map"
   },
   "entrypoints": [
     "static/css/main.656c124b.css",
-    "static/js/main.86ba95a4.js"
+    "static/js/main.81811f34.js"
   ]
 }
