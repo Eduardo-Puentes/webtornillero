@@ -27,17 +27,17 @@ const Footer = () => {
         <MDBContainer className='text-center text-md-start mt-5'>
           <MDBRow className='mt-3'>
             <MDBCol md='3' lg='4' xl='3' className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>
+              <p className='text-uppercase fw-bold mb-4'>
                 <MDBIcon color='secondary' icon='gem' className='me-3' />
                 Señor Tornillero
-              </h6>
+              </p>
               <p>
               Nuestra amplia selección de tornillos de alta calidad está diseñada para satisfacer todas tus necesidades, desde pequeñas reparaciones hasta grandes construcciones.
               </p>
             </MDBCol>
 
             <MDBCol md='2' lg='2' xl='2' className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Productos</h6>
+              <p className='text-uppercase fw-bold mb-4'>Productos</p>
               <p>
                 <Link to='tienda' className='text-reset' aria-label="Tornillos">
                   Tornillos
@@ -61,7 +61,7 @@ const Footer = () => {
             </MDBCol>
 
             <MDBCol md='3' lg='2' xl='2' className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Navegación</h6>
+              <p className='text-uppercase fw-bold mb-4'>Navegación</p>
               <p>
                 <Link to='tienda' className='text-reset' aria-label="Tienda">
                   Tienda
@@ -85,7 +85,7 @@ const Footer = () => {
             </MDBCol>
 
             <MDBCol md='5' lg='4' xl='4' className='mx-auto mb-md-0 mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Contacto</h6>
+              <p className='text-uppercase fw-bold mb-4'>Contacto</p>
               <p>
                 <MDBIcon color='secondary' icon='home' className='me-2' />
                 76900 El Pueblito, Qro, México
